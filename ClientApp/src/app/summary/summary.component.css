@@ -1,0 +1,14 @@
+@media screen {}
+@media print {}
+
+input { display: none; }
+button {display: none; }
+label { font-weight: bold;}
+label::after { content: ":"}
+.input-value { 
+    border-bottom: 1px dotted #c03;
+    width: 100%;
+}
+.cart {margin-bottom: 30px}
+.cart .themed-grid-col { border: 1px solid #999}
+.block {margin-top:20px}

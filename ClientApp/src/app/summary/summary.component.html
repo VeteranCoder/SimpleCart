@@ -1,0 +1,62 @@
+<H2>Your Order:</H2>
+<div class="text-center cart"  >
+    <div class="row" *ngFor="let item of order.cart">
+      <div class="col-3 themed-grid-col">{{item.product.name}}</div>
+      <div class="col-5 themed-grid-col">{{item.product.description}}</div>
+      <div class="col-1 themed-grid-col">${{item.product.price}}</div>
+      <div class="col-2 themed-grid-col">Qty: {{item.quantity}}</div>
+      
+    </div>
+  </div>
+
+
+  <h2>Payment:</h2>
+  <div class="row">
+    <div class="col-2 text-right"><label for="ccNum">Card #</label> </div>
+    <div class="col-8 text-left input-value">
+      <!-- <input id="ccNum" type="text" [(formControl)]="myForm.controls['cardNumber']"> -->
+      <span class="print">{{order.paymentInfo.cardNumber}}</span>
+    </div>
+  </div>
+  <div class="block">
+    <h2>Ship To:</h2>
+    <div class="row">
+      <div class="col-2 text-right"><label for="name">Name</label> </div>
+      <div class="col-8 text-left input-value">
+        <!-- <input id="name" type="text" name="name" [(formControl)]="myForm.controls['name']"> -->
+        <span class="print">{{order.shippingInfo.name}}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 text-right"><label for="addr1">Address 1</label> </div>
+      <div class="col-8 text-left input-value" >
+        <!-- <input id="addr1" type="text" name="addr1" [(formControl)]="myForm.controls['address1']"> -->
+        <span class="print">{{order.shippingInfo.address1}}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 text-right"><label for="addr2">Address 2</label> </div>
+      <div class="col-8 text-left input-value">
+        <!-- <input id="addr2" type="text" name="addr2" [(formControl)]="myForm.controls['address2']"> -->
+        <span class="print">{{order.shippingInfo.address2}}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 text-right"><label for="city">City</label> </div>
+      <div class="col-2 text-left input-value">
+        <!-- <input id="city" type="text" name="city" [(formControl)]="myForm.controls['city']"> -->
+        <span class="print">{{order.shippingInfo.city}}</span>
+      </div>
+      <div class="col-1 text-right"><label for="state">State</label> </div>
+      <div class="col-1 text-left input-value">
+        <!-- <input id="state" type="text" name="state" [(formControl)]="myForm.controls['state']"> -->
+        <span class="print">{{order.shippingInfo.state}}</span>
+      </div>
+      <div class="col-1 text-right"><label for="zip">Zip</label> </div>
+      <div class="col-1 text-left input-value" >
+        <!-- <input id="zip" type="text" name="zip" [(formControl)]="myForm.controls['zip']"> -->
+        <span class="print">{{order.shippingInfo.zip}}</span>
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="ui button">submit</button>

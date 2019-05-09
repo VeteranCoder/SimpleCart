@@ -1,0 +1,21 @@
+
+<div class="text-center " *ngFor="let item of cart">
+  <div class="row">
+    <div class="col-3 themed-grid-col">{{item.product.name}}</div>
+    <div class="col-5 themed-grid-col">{{item.product.description}}</div>
+    <div class="col-1 themed-grid-col">{{item.product.price}}</div>
+    <div class="col-1 themed-grid-col">
+      <input type="text" title="update quantity" [value]="item.quantity"
+        (input)="item.quantity = $event.target.value">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-8 total-cost"> </div>
+  <div class="col-2 total-cost"> Total Cost = {{orderCost}}</div>
+</div>
+<div class="row">
+  <div class="col-10 text-center">
+    <button routerLink="/check-out" [disabled]="orderCost === 0">Place Order</button>
+  </div>
+</div>

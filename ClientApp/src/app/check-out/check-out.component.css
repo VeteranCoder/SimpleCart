@@ -1,0 +1,6 @@
+.block {
+    margin: 40px 0 10px 0;
+}
+#city { width:100px }
+#state { width:50px }
+#zip { width:50px }

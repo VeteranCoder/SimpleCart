@@ -1,0 +1,46 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)" class="ui form">
+  <h2>Payment:</h2>
+  <div class="row">
+    <div class="col-2 text-right"><label for="ccNum">Card #</label> </div>
+    <div class="col-8 text-left">
+      <input id="ccNum" type="text" [(formControl)]="myForm.controls['cardNumber']"
+        >
+    </div>
+  </div>
+  <div class="block">
+    <h2>Ship To:</h2>
+    <div class="row">
+      <div class="col-2 text-right"><label for="name">Name</label> </div>
+      <div class="col-8 text-left">
+        <input id="name" type="text" name="name" [(formControl)]="myForm.controls['name']">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 text-right"><label for="addr1">Address 1</label> </div>
+      <div class="col-8 text-left">
+        <input id="addr1" type="text" name="addr1" [(formControl)]="myForm.controls['address1']">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 text-right"><label for="addr2">Address 2</label> </div>
+      <div class="col-8 text-left">
+        <input id="addr2" type="text" name="addr2" [(formControl)]="myForm.controls['address2']">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 text-right"><label for="city">City</label> </div>
+      <div class="col-2 text-left">
+        <input id="city" type="text" name="city" [(formControl)]="myForm.controls['city']">
+      </div>
+      <div class="col-1 text-right"><label for="state">State</label> </div>
+      <div class="col-1 text-left">
+        <input id="state" type="text" name="state" [(formControl)]="myForm.controls['state']">
+      </div>
+      <div class="col-1 text-right"><label for="zip">Zip</label> </div>
+      <div class="col-1 text-left">
+        <input id="zip" type="text" name="zip" [(formControl)]="myForm.controls['zip']">
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="ui button">submit</button>
+</form>

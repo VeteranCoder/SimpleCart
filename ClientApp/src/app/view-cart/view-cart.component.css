@@ -1,0 +1,12 @@
+
+html {
+    font-size: 14px;
+    background-color: blue;
+}
+input {width:40px }
+.total-cost {
+    float: right;
+    /* border: 2px dotted orange; */
+    padding-left: 0;
+    padding-right: 0;
+}
